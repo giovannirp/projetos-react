@@ -10,6 +10,9 @@ const Header = () => {
                         <LinkWrapper to='/' className="brand-logo" activeStyle={{}}>Logo</LinkWrapper>
                         <ul id="nav-mobile" class="right hide-on-med-and-down">
                             <li>
+                                <LinkWrapper to='/curso'>Curso</LinkWrapper>
+                            </li>
+                            <li>
                                 <LinkWrapper to='/sobre'>Sobre</LinkWrapper>
                             </li>
                         </ul>
