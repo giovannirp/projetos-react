@@ -6,9 +6,9 @@ const Header = () => {
         <Fragment>
             <nav>
                 <div className="container">
-                    <div class="nav-wrapper">
+                    <div className="nav-wrapper">
                         <LinkWrapper to='/' className="brand-logo" activeStyle={{}}>Logo</LinkWrapper>
-                        <ul id="nav-mobile" class="right hide-on-med-and-down">
+                        <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li>
                                 <LinkWrapper to='/curso'>Curso</LinkWrapper>
                             </li>
