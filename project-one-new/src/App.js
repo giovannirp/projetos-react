@@ -1,34 +1,23 @@
 import React, { Fragment, Component } from 'react';
-
-
 import 'materialize-css/dist/css/materialize.min.css';
 import Header from './Header/Header';
 import Tabela from './Tabela';
+import ApiService from './ultils/ApiService';
 
 class App extends Component {
+  constructor(props) {
+    super(props);
 
-  listao = [
-    {
-      nome: 'Paulo',
-      livro: 'React',
-      preco: '1000'
-    },
-    {
-      nome: 'Daniel',
-      livro: 'Java',
-      preco: '99'
-    },
-    {
-      nome: 'Marcos',
-      livro: 'Design',
-      preco: '150'
-    },
-    {
-      nome: 'Bruno',
-      livro: 'DevOps',
-      preco: '100'
-    }
-  ];
+    this.state = {
+      listao: []
+    };
+  }
+  componentDidMount() {
+    ApiService.ListagemGeral()
+      .then(res => {
+        this.setState({ listao: [...this.state.listao, ...res.data] })
+      });
+  }
 
   render() {
     return (
@@ -36,7 +25,7 @@ class App extends Component {
         <Header />
         <div className="container">
           <h1>Meu projeto</h1>
-          <Tabela lista={this.listao} />
+          <Tabela lista={this.state.listao} />
         </div>
       </Fragment>
     );

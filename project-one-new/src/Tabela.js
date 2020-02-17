@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 
-
 const TableHead = () => {
     return (
         <thead>
@@ -15,12 +14,12 @@ const TableHead = () => {
 }
 
 const TableBody = props => {
-
-    const linhas = props.lista.map((linha, index) => {
+    console.log(props);
+    const linhas = props.lista.map((linha) => {
         return (
-            <tr key={index}>
+            <tr key={linha.id}>
                 <td>{linha.nome}</td>
-                <td>{linha.livro}</td>
+                <td>{linha.curso}</td>
                 <td>{linha.preco}</td>
                 <td><button>Remover</button></td>
             </tr>
@@ -36,8 +35,6 @@ const TableBody = props => {
 
 
 class Tabela extends Component {
-
-
     render() {
         const { lista } = this.props;
 

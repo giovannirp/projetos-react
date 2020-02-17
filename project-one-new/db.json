@@ -1,0 +1,22 @@
+{
+  "listagem": [
+    {
+      "id": 1,
+      "nome": "Gigi",
+      "curso": "React",
+      "preco": 100
+    },
+    {
+      "id": 2,
+      "nome": "Princi",
+      "curso": "Angular",
+      "preco": 35
+    },
+    {
+      "id": 3,
+      "nome": "Fernando Monte Negro",
+      "curso": "Java",
+      "preco": 50
+    }
+  ]
+}
