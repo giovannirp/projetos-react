@@ -15,6 +15,9 @@ const Header = () => {
                             <li>
                                 <LinkWrapper to='/sobre'>Sobre</LinkWrapper>
                             </li>
+                            <li>
+                                <LinkWrapper to='/cadastro'>Cadastro</LinkWrapper>
+                            </li>
                         </ul>
                     </div>
                 </div>

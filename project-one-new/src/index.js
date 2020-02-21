@@ -8,6 +8,7 @@ import * as serviceWorker from './serviceWorker';
 import Sobre from './Sobre/Sobre';
 import NotFound from './NotFound/NotFound';
 import Curso from './Curso/Curso';
+import Cadastro from './Cadastro/Cadastro';
 
 ReactDOM.render(
     <BrowserRouter>
@@ -15,6 +16,7 @@ ReactDOM.render(
             <Route path='/' exact={true} component={App} />
             <Route path='/sobre' component={Sobre} />
             <Route path='/curso' component={Curso} />
+            <Route path='/cadastro' component={Cadastro} />
             <Route component={NotFound} />
         </Switch>
     </BrowserRouter>

@@ -17,6 +17,52 @@
       "nome": "Fernando Monte Negro",
       "curso": "Java",
       "preco": 50
+    },
+    {
+      "id": 4,
+      "nome": "Helton Vivo",
+      "curso": "Java",
+      "preco": 11
+    },
+    {
+      "id": 5,
+      "nome": "Adriano Se ta Me Ouvindo",
+      "curso": "Java",
+      "preco": 42
+    }
+  ],
+  "sobre": [
+    {
+      "id": 1,
+      "titulo": "Where does it come from?",
+      "imagePath": "https://cdn1.imggmi.com/uploads/2020/2/21/6a515f6837e5fe3886c8e2351df9242d-full.png",
+      "mensagem": "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of de Finibus Bonorum et Malorum (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, Lorem ipsum dolor sit amet.., comes from a line in section 1.10.32"
+    }
+  ],
+  "cursos": [
+    {
+      "id": 1,
+      "titulo": "Ract com Javascript",
+      "imagePath": "https://cdn1.imggmi.com/uploads/2020/2/21/3b26683ecd53b249f674430fd90ccae5-full.jpg",
+      "mensagem": "Contrary to popular belief, Lorem Ipsum is not.."
+    },
+    {
+      "id": 2,
+      "titulo": "Especialização em Ti",
+      "imagePath": "https://cdn1.imggmi.com/uploads/2020/2/21/cbd546c9bb2128c68e5b948419a7e113-full.jpg",
+      "mensagem": "Contrary to popular belief, Lorem Ipsum is not.."
+    },
+    {
+      "id": 3,
+      "titulo": "Curso em Angular 9",
+      "imagePath": "https://cdn1.imggmi.com/uploads/2020/2/21/709fc87aedeb25a955562113d7e86572-full.jpg",
+      "mensagem": "Contrary to popular belief, Lorem Ips um is notum is not um is not.."
+    },
+    {
+      "id": 4,
+      "titulo": "Javascript Avançado",
+      "imagePath": "https://cdn1.imggmi.com/uploads/2020/2/21/9878f05a34b47a64c671965e497d1d49-full.png",
+      "mensagem": "Contrary to popular belief, Lorem Ips um is notum is notum is notum is n ot um is not.."
     }
   ]
 }

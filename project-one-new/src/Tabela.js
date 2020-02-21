@@ -4,7 +4,7 @@ const TableHead = () => {
     return (
         <thead>
             <tr>
-                <th>Autor</th>
+                <th>Nome</th>
                 <th>Livro</th>
                 <th>Preco</th>
                 <th>Remover</th>
@@ -14,14 +14,13 @@ const TableHead = () => {
 }
 
 const TableBody = props => {
-    console.log(props);
     const linhas = props.lista.map((linha) => {
         return (
             <tr key={linha.id}>
                 <td>{linha.nome}</td>
                 <td>{linha.curso}</td>
                 <td>{linha.preco}</td>
-                <td><button>Remover</button></td>
+                <td><button className="waves-effect waves-light btn">Remover</button></td>
             </tr>
         );
     });
@@ -33,16 +32,16 @@ const TableBody = props => {
     );
 }
 
-
 class Tabela extends Component {
     render() {
         const { lista } = this.props;
-
         return (
-            <table>
-                <TableHead />
-                <TableBody lista={lista} />
-            </table>
+            <div className="DivHeigh">
+                <table>
+                    <TableHead />
+                    <TableBody lista={lista} />
+                </table>
+            </div>
         );
     }
 
