@@ -11,24 +11,6 @@
       "nome": "Princi",
       "curso": "Angular",
       "preco": 35
-    },
-    {
-      "id": 3,
-      "nome": "Fernando Monte Negro",
-      "curso": "Java",
-      "preco": 50
-    },
-    {
-      "id": 4,
-      "nome": "Helton Vivo",
-      "curso": "Java",
-      "preco": 11
-    },
-    {
-      "id": 5,
-      "nome": "Adriano Se ta Me Ouvindo",
-      "curso": "Java",
-      "preco": 42
     }
   ],
   "sobre": [
@@ -43,24 +25,28 @@
     {
       "id": 1,
       "titulo": "Ract com Javascript",
+      "tagCurso": "React",
       "imagePath": "https://cdn1.imggmi.com/uploads/2020/2/21/3b26683ecd53b249f674430fd90ccae5-full.jpg",
       "mensagem": "Contrary to popular belief, Lorem Ipsum is not.."
     },
     {
       "id": 2,
       "titulo": "Especialização em Ti",
+      "tagCurso": "Ti",
       "imagePath": "https://cdn1.imggmi.com/uploads/2020/2/21/cbd546c9bb2128c68e5b948419a7e113-full.jpg",
       "mensagem": "Contrary to popular belief, Lorem Ipsum is not.."
     },
     {
       "id": 3,
       "titulo": "Curso em Angular 9",
+      "tagCurso": "Angular",
       "imagePath": "https://cdn1.imggmi.com/uploads/2020/2/21/709fc87aedeb25a955562113d7e86572-full.jpg",
       "mensagem": "Contrary to popular belief, Lorem Ips um is notum is not um is not.."
     },
     {
       "id": 4,
       "titulo": "Javascript Avançado",
+      "tagCurso": "Javascript",
       "imagePath": "https://cdn1.imggmi.com/uploads/2020/2/21/9878f05a34b47a64c671965e497d1d49-full.png",
       "mensagem": "Contrary to popular belief, Lorem Ips um is notum is notum is notum is n ot um is not.."
     }

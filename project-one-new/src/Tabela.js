@@ -20,7 +20,7 @@ const TableBody = props => {
                 <td>{linha.nome}</td>
                 <td>{linha.curso}</td>
                 <td>{linha.preco}</td>
-                <td><button className="waves-effect waves-light btn">Remover</button></td>
+                <td><button onClick={() => { props.removerListagem(linha.id) }} className="waves-effect waves-light btn">Remover</button></td>
             </tr>
         );
     });
@@ -34,12 +34,12 @@ const TableBody = props => {
 
 class Tabela extends Component {
     render() {
-        const { lista } = this.props;
+        const { lista, removerListagem } = this.props;
         return (
             <div className="DivHeigh">
                 <table>
                     <TableHead />
-                    <TableBody lista={lista} />
+                    <TableBody lista={lista} removerListagem={removerListagem} />
                 </table>
             </div>
         );

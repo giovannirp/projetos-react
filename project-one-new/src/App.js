@@ -14,6 +14,27 @@ class App extends Component {
       listao: []
     };
   }
+  removerListagem = id => {
+    const { listao } = this.state;
+
+    const listagemAtualizado = listao.filter(lista => {
+      return lista.id !== id;
+    });
+    ApiService.RemoveListagem(id)
+      .then(res => {
+        this.setState({ listao: [...listagemAtualizado] })
+        PopUp.exibeMensagem("error", "Item removido com sucesso");
+      })
+      .catch(err => {
+        PopUp.exibeMensagem(
+          "error",
+          "Error na comunicação da API ao tentar remover autor"
+        )
+      })
+
+  }
+
+
   componentDidMount() {
     ApiService.ListagemGeral()
       .then(res => {
@@ -34,7 +55,7 @@ class App extends Component {
         <Header />
         <div className="container">
           <h4>Meu projeto</h4>
-          <Tabela lista={this.state.listao} />
+          <Tabela lista={this.state.listao} removerListagem={this.removerListagem} />
         </div>
       </Fragment>
     );
