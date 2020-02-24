@@ -32,7 +32,7 @@ class Curso extends Component {
                                         <img class="activator" src={cursos.imagePath} />
                                     </div>
                                     <div class="card-content">
-                                        <span class="card-title activator grey-text text-darken-4">{cursos.titulo}</span>
+                                        <span class="card-title activator grey-text text-darken-4">{cursos.titulo} <i class="material-icons right">more_vert</i></span>
                                         <p><a href="#">Ver mais</a></p>
                                     </div>
                                     <div class="card-reveal">

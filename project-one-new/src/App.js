@@ -5,6 +5,7 @@ import Header from './Header/Header';
 import Tabela from './Tabela';
 import ApiService from './ApiService';
 import PopUp from './Utils/PoupUp';
+import Footer from './Components/footer/Footer';
 
 class App extends Component {
   constructor(props) {
@@ -31,9 +32,7 @@ class App extends Component {
           "Error na comunicação da API ao tentar remover autor"
         )
       })
-
   }
-
 
   componentDidMount() {
     ApiService.ListagemGeral()
@@ -54,7 +53,7 @@ class App extends Component {
       <Fragment>
         <Header />
         <div className="container">
-          <h4>Meu projeto</h4>
+          <h4>Listage de cadastros</h4>
           <Tabela lista={this.state.listao} removerListagem={this.removerListagem} />
         </div>
       </Fragment>

@@ -1,6 +1,7 @@
 import React, { Fragment, Component } from 'react';
 import Header from '../Header/Header';
 import ApiService from '../ApiService';
+import Footer from '../Components/footer/Footer';
 
 class Sobre extends Component {
     constructor(props) {

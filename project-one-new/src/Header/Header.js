@@ -10,13 +10,13 @@ const Header = () => {
                         <LinkWrapper to='/' className="brand-logo" activeStyle={{}}>Logo</LinkWrapper>
                         <ul id="nav-mobile" className="right hide-on-med-and-down">
                             <li>
-                                <LinkWrapper to='/curso'>Curso</LinkWrapper>
+                                <LinkWrapper to='/curso'><i class="material-icons left">desktop_mac</i>Curso</LinkWrapper>
                             </li>
                             <li>
-                                <LinkWrapper to='/sobre'>Sobre</LinkWrapper>
+                                <LinkWrapper to='/sobre'><i class="material-icons left">assignment_ind</i>Sobre</LinkWrapper>
                             </li>
                             <li>
-                                <LinkWrapper to='/cadastro'>Cadastro</LinkWrapper>
+                                <LinkWrapper to='/cadastro'><i class="material-icons left">control_point</i>Cadastro</LinkWrapper>
                             </li>
                         </ul>
                     </div>
