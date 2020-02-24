@@ -5,7 +5,7 @@ import Header from './Header/Header';
 import Tabela from './Tabela';
 import ApiService from './ApiService';
 import PopUp from './Utils/PoupUp';
-import Footer from './Components/footer/Footer';
+import Form from './Components/Formulario/Formulario';
 
 class App extends Component {
   constructor(props) {
@@ -56,6 +56,7 @@ class App extends Component {
           <h4>Listage de cadastros</h4>
           <Tabela lista={this.state.listao} removerListagem={this.removerListagem} />
         </div>
+        <Form />
       </Fragment>
     );
   }

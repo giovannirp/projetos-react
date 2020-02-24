@@ -4,6 +4,11 @@ const ApiService = {
             .then(res => ApiService.TrataErros(res))
             .then(res => res.json());
     },
+    CriaListagem: listagem => {
+        return fetch('http://localhost:3000/listagem', { method: 'POST', headers: { 'content-type': 'aplication/json' }, body: listagem })
+            .then(res => ApiService.TrataErros(res))
+            .then(res => res.json());
+    },
     RemoveListagem: id => {
         return fetch(`http://localhost:3000/listagem/${id}`, { method: 'DELETE', Headers: { 'content-type': 'aplication/json' } })
             .then(res => ApiService.TrataErros(res))

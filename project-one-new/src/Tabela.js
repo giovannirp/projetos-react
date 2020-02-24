@@ -20,7 +20,7 @@ const TableBody = props => {
                 <td>{linha.nome}</td>
                 <td>{linha.curso}</td>
                 <td>{linha.preco}</td>
-                <td><button onClick={() => { props.removerListagem(linha.id) }} className="waves-effect red darken-1 btn"><i class="material-icons left">delete</i>Remover</button></td>
+                <td><button onClick={() => { props.removerListagem(linha.id) }} className="waves-effect red darken-1 btn"><i className="material-icons left">delete</i>Remover</button></td>
             </tr>
         );
     });
