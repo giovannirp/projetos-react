@@ -1,0 +1,20 @@
+.header {
+  background-color: #d00303;
+  height: 120px;
+
+  .containerHeader {
+    max-width: 1000px;
+    margin: 0 auto;
+    height: 120px;
+    display: flex;
+    align-items: center;
+
+    h1 {
+      color: #fff;
+      text-align: left;
+      font-size: 36px;
+      text-transform: uppercase;
+      text-shadow: 2px 2px 2px #29292a;
+    }
+  }
+}
