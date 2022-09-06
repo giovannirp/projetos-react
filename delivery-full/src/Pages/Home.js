@@ -1,37 +1,23 @@
 import React from "react";
+import Boxes from "../Components/Boxes";
 import "./Home.scss";
-import foto1 from "../assets/img/foto1.jpg";
-import foto2 from "../assets/img/foto2.jpeg";
-
+import listBoxsNew from "../assets/date";
 
 export default function Home() {
   return (
     <div className="home">
       <h1>Painel de lanches</h1>
       <div className="boxes">
-        <div className="box">
-          <img src={foto1} alt="" />
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
-            Veja mais
-          </a>
-        </div>
 
-        <div className="box">
-          <img src={foto2} alt="" />
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
-            Veja mais
-          </a>
-        </div>
+        {listBoxsNew.map((list) => (
+          <Boxes
+            key={list.id}
+            titulo={list.titulo}
+            img={list.img}
+            textoLink={list.textoLink}
+          />
 
-        <div className="box">
-          <img src={foto1} alt="" />
-          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
-            Veja mais
-          </a>
-        </div>
+        ))}
       </div>
     </div>
   );

@@ -1,0 +1,18 @@
+import React from "react";
+
+function Boxes(props) {
+    console.log(props)
+  return (
+    <>
+      <div className="box">
+        <img src={props.img} alt="" />
+        <p>{props.titulo}</p>
+        <a href="http://" target="_blank" rel="noopener noreferrer">
+          {props.textoLink}
+        </a>
+      </div>
+    </>
+  );
+}
+
+export default Boxes;
