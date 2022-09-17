@@ -1,7 +1,6 @@
 import React from "react";
 
 function Boxes(props) {
-    console.log(props)
   return (
     <>
       <div className="box">
