@@ -1,7 +1,12 @@
-import React from 'react'
+import React from "react";
+import "./Contato.scss";
 
 export default function Contato() {
   return (
-    <div>Contato</div>
-  )
+    <main>
+      <div className="contato">
+        <h1>Contato</h1>
+      </div>
+    </main>
+  );
 }

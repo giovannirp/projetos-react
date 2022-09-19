@@ -1,7 +1,12 @@
-import React from 'react'
+import React from 'react';
+import "./About.scss";
 
 export default function About() {
   return (
-    <div>About</div>
+    <main>
+      <div className="about">
+        <h1>About</h1>
+      </div>
+    </main>
   )
 }
