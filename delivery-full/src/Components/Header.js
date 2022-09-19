@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Header.scss";
 import Nav from "./Nav";
 
@@ -7,7 +8,9 @@ function Header() {
     <>
       <header className="header">
         <div className="containerHeader">
-          <h1>Delivery</h1>
+          <h1>
+            <Link to="/">Delivery</Link>
+          </h1>
         </div>
       </header>
       <Nav />

@@ -1,0 +1,29 @@
+.product-details {
+  h1 {
+    margin-top: 15px;
+    font-size: 18px;
+    margin-bottom: 20px;
+    color: #28266d;
+    text-shadow: 1px 1px 1px #e1e1e1;
+  }
+
+  img {
+    max-width: 1050px;
+    height: 550px;
+  }
+
+  .tit-product {
+    margin-bottom: 10px;
+
+    strong {
+      font-weight: bold;
+    }
+  }
+
+  p {
+    line-height: 21px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 950px;
+  }
+}

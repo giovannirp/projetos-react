@@ -37,6 +37,7 @@ export default function Home() {
                 img={list.img}
                 textoLink={list.textoLink}
                 link={list.link}
+                linkDetalhes={`/products/${list.id}`}
               />
             ))}
         </div>

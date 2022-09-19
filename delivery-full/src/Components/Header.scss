@@ -10,11 +10,14 @@
     align-items: center;
 
     h1 {
-      color: #fff;
-      text-align: left;
-      font-size: 36px;
-      text-transform: uppercase;
-      text-shadow: 2px 2px 2px #29292a;
+      a {
+        color: #fff;
+        text-align: left;
+        font-size: 36px;
+        text-transform: uppercase;
+        text-shadow: 2px 2px 2px #29292a;
+        text-decoration: none;
+      }
     }
   }
 }
