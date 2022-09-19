@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from 'react-router-dom';
 import "./Nav.scss";
 
 export default function Nav() {
@@ -7,13 +8,13 @@ export default function Nav() {
       <div className="containerNav">
         <ul>
           <li>
-            <a href="http://">Home</a>
+            <Link to="/">Home</Link>
           </li>
           <li>
-            <a href="http://">Sobre</a>
+            <Link to="/about">Sobre</Link>
           </li>
           <li>
-            <a href="http://">Contato</a>
+            <Link to="/contato">Contato</Link>
           </li>
         </ul>
       </div>

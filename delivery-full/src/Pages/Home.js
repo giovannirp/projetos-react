@@ -4,8 +4,8 @@ import "./Home.scss";
 import MacarraoInst from "../Components/MacarraoInst";
 // import { useFetch } from "./hooks/useFetch";
 import { useFetch } from "../hooks/useFetch";
-const url = "http://localhost:3001/products";
-const urlMac = "http://localhost:3001/macarrao";
+const url = "http://localhost:3000/products";
+const urlMac = "http://localhost:3000/macarrao";
 
 export default function Home() {
   const { data: items } = useFetch(url);
@@ -25,34 +25,37 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="home">
-      <h1>Painel de lanches</h1>
-      <div className="boxes">
-        {items && items.map((list) => (
-          <Boxes
-            key={list.id}
-            titulo={list.titulo}
-            img={list.img}
-            textoLink={list.textoLink}
-            link={list.link}
-          />
-        ))}
-      </div>
-      <hr />
-      <div>
-        <h1>Macarrão instantâneo</h1>
-        <div className="macaraInst">
-          {mac.map((macList) => (
-            <MacarraoInst
-              key={macList.id}
-              titulo={macList.titulo}
-              img={macList.img}
-              textoLink={macList.textoLink}
-              link={macList.link}
-            />
-          ))}
+    <main>
+      <div className="home">
+        <h1>Painel de lanches</h1>
+        <div className="boxes">
+          {items &&
+            items.map((list) => (
+              <Boxes
+                key={list.id}
+                titulo={list.titulo}
+                img={list.img}
+                textoLink={list.textoLink}
+                link={list.link}
+              />
+            ))}
+        </div>
+        <hr />
+        <div>
+          <h1>Macarrão instantâneo</h1>
+          <div className="macaraInst">
+            {mac.map((macList) => (
+              <MacarraoInst
+                key={macList.id}
+                titulo={macList.titulo}
+                img={macList.img}
+                textoLink={macList.textoLink}
+                link={macList.link}
+              />
+            ))}
+          </div>
         </div>
       </div>
-    </div>
+    </main>
   );
 }
