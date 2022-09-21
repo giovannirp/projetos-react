@@ -4,6 +4,7 @@ import "./Home.scss";
 import MacarraoInst from "../Components/MacarraoInst";
 // import { useFetch } from "./hooks/useFetch";
 import { useFetch } from "../hooks/useFetch";
+import SearchForm from "../Components/SearchForm";
 const url = "http://localhost:3000/products";
 const urlMac = "http://localhost:3000/macarrao";
 
@@ -28,6 +29,7 @@ export default function Home() {
     <main>
       <div className="home">
         <h1>Painel de lanches</h1>
+        <SearchForm />
         <div className="boxes">
           {items &&
             items.map((list) => (

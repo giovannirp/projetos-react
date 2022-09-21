@@ -12,7 +12,7 @@ export default function SearchForm() {
   };
 
   return (
-    <div>
+    <div className="search">
       <form onSubmit={handleSubmit}>
         <input type="text" onChange={(e) => setQuery(e.target.value)} />
         <input type="submit" value="Buscar" />
