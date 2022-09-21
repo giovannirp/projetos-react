@@ -24,8 +24,16 @@ nav {
           color: #fff;
 
           &:hover {
-              text-decoration: underline;
+            text-decoration: underline;
           }
+        }
+
+        .link-ativo {
+          text-decoration: underline;
+        }
+
+        .link-desativo {
+          text-decoration: none;
         }
       }
     }

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from "react-router-dom";
 import "./Nav.scss";
 
 export default function Nav() {
@@ -8,13 +8,34 @@ export default function Nav() {
       <div className="containerNav">
         <ul>
           <li>
-            <Link to="/">Home</Link>
+            <NavLink
+              to="/home"
+              className={({ isActive }) =>
+                isActive ? "link-ativo" : "link-desativo"
+              }
+            >
+              Home
+            </NavLink>
           </li>
           <li>
-            <Link to="/about">Sobre</Link>
+            <NavLink
+              to="/about"
+              className={({ isActive }) =>
+                isActive ? "link-ativo" : "link-desativo"
+              }
+            >
+              Sobre
+            </NavLink>
           </li>
           <li>
-            <Link to="/contato">Contato</Link>
+            <NavLink
+              to="/contato"
+              className={({ isActive }) =>
+                isActive ? "link-ativo" : "link-desativo"
+              }
+            >
+              Contato
+            </NavLink>
           </li>
         </ul>
       </div>
