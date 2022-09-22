@@ -1,5 +1,6 @@
 import { React, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import "./SearchForm.scss";
 
 export default function SearchForm() {
   const navigate = useNavigate();
@@ -14,7 +15,7 @@ export default function SearchForm() {
   return (
     <div className="search">
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={(e) => setQuery(e.target.value)} />
+        <input type="text" onChange={(e) => setQuery(e.target.value)} required />
         <input type="submit" value="Buscar" />
       </form>
     </div>
