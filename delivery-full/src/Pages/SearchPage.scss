@@ -10,6 +10,10 @@
   .boxes {
     display: flex;
 
+    .mensagemFull {
+      color: #d00303;  
+    }
+
     .box {
       border: 1px solid #e5e5e5;
       max-width: 300px;

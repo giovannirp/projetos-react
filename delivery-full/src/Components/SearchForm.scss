@@ -8,6 +8,11 @@
       border: 1px solid #9f9f9f;
       height: 22px;
       width: 45%;
+      padding-left: 5px;
+
+      &:focus {
+        outline: none;
+      }
     }
   
     input[type=submit] {

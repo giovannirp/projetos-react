@@ -10,11 +10,15 @@ export default function Search() {
   const url = "http://localhost:3000/products?" + searchParams;
 
   const { data: items, loadin, error } = useFetch(url);
+  console.log(items);
   return (
     <main>
       <div className="searchPage">
         <h1>Resultados disponíveis</h1>
         <div className="boxes">
+          <p className="mensagemFull">
+            {items && items.length === 0 && "Não existe, nehuma informação"}
+          </p>
           {items &&
             items.map((list) => (
               <Boxes

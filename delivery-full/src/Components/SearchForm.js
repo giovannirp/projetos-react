@@ -15,7 +15,7 @@ export default function SearchForm() {
   return (
     <div className="search">
       <form onSubmit={handleSubmit}>
-        <input type="text" onChange={(e) => setQuery(e.target.value)} required />
+        <input type="text" placeholder="Digite o lanche, que você está procurando" onChange={(e) => setQuery(e.target.value)} required />
         <input type="submit" value="Buscar" />
       </form>
     </div>
