@@ -25,7 +25,7 @@ export default function Contato() {
       mensagem
     }
 
-    const res = await fetch("http://localhost:3000/contato", {
+    const res = await fetch(url, {
       method: "POST",
       headers: {
         "Content-type": "application/json",
@@ -44,7 +44,7 @@ export default function Contato() {
         <h1>Contato</h1>
         <form onSubmit={handleSubmit}>
           <label>
-            Nome:
+            <span>Nome:</span>
             <input
               type="text"
               value={nome}
@@ -52,7 +52,7 @@ export default function Contato() {
             />
           </label>
           <label>
-            Telefone:
+            <span>Telefone:</span>
             <input
               type="text"
               value={telefone}
@@ -60,7 +60,7 @@ export default function Contato() {
             />
           </label>
           <label>
-            Mensagem:
+            <span>Mensagem:</span>
             <input
               type="text"
               value={mensagem}
