@@ -37,6 +37,16 @@ export default function Nav() {
               Contato
             </NavLink>
           </li>
+          <li>
+            <NavLink
+              to="/comentarios"
+              className={({ isActive }) =>
+                isActive ? "link-ativo" : "link-desativo"
+              }
+            >
+              Comentários
+            </NavLink>
+          </li>
         </ul>
       </div>
     </nav>

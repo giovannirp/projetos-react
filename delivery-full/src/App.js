@@ -8,6 +8,7 @@ import ProductDetails from "./Pages/ProductDetails";
 import NotFound from "./Pages/NotFound";
 import SearchForm from "./Components/SearchForm";
 import Search from "./Pages/Search";
+import Comentarios from "./Pages/Comentarios";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/contato" element={<Contato />} />
           <Route path="/products/:id" element={<ProductDetails />} />
           <Route path="/search" element={<Search />} />
+          <Route path="/comentarios" element={<Comentarios />} />
           <Route  path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
