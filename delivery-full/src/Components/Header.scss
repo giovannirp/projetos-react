@@ -17,6 +17,10 @@
         text-transform: uppercase;
         text-shadow: 2px 2px 2px #29292a;
         text-decoration: none;
+
+        @media screen and (max-width: 1011px) {
+          padding-left: 10px;
+        }
       }
     }
   }
