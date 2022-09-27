@@ -5,7 +5,9 @@ function Boxes(props) {
   return (
     <>
       <div className="box">
-        <img src={props.img} alt="" />
+        <Link className="linkBoxHome" to={props.linkDetalhes}>
+          <img src={props.img} alt="" />
+        </Link>
         <p>{props.titulo}</p>
         <Link to={props.linkDetalhes}>Veja mais</Link>
       </div>
