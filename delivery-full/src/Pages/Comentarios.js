@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import { useState } from "react";
 import ListComentarios from "../Components/ListComentarios";
 import "./Comentarios.scss";
@@ -38,6 +39,8 @@ export default function Comentarios() {
 
     return await response.json();
   };
+
+
 
   return (
     <main>

@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import { useFetch } from "../hooks/useFetch";
 import "./Contato.scss";
 
 const url = "http://localhost:3000/contato";
 
 export default function Contato() {
+  const { data: items, httpConfig } = useFetch(url);
   const [contato, setContato] = useState([]);
 
   const [nome, setNome] = useState("");
@@ -25,15 +27,16 @@ export default function Contato() {
       mensagem
     }
 
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(contato)
-    });
+    // const res = await fetch(url, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-type": "application/json",
+    //   },
+    //   body: JSON.stringify(contato)
+    // });
 
-    const addContato = await res.json();
+    // const addContato = await res.json();
+    httpConfig(contato, "POST");
 
     clearInputs();
   }
