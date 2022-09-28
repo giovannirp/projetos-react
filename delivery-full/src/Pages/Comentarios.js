@@ -62,12 +62,12 @@ export default function Comentarios() {
               id="email"
             />
           </div>
-          <div className="form-control">
+          <div className="form-text-area">
             <label htmlFor="comentario">Comentário:</label>
             <textarea value={comentario} id="comentario" onChange={(e) => setComentario(e.target.value)} cols="30" rows="10"></textarea>
           </div>
-          <div className="form-control">
-            <button>Enviar</button>
+          <div className="form-control-button">
+          <input type="submit" value="Enviar" />
           </div>
         </form>
         <hr />

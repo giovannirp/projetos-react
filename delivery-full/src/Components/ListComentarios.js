@@ -1,5 +1,6 @@
 import React from "react";
 import { useState, useEffect } from "react";
+import "./ListComentarios.scss";
 const url = "http://localhost:3000/comentarios";
 
 export default function ListComentarios() {
@@ -17,14 +18,22 @@ export default function ListComentarios() {
   }, []);
   return (
     <main>
-      <div>
+      <div className="listComentarios">
         <h1>Lista de todos os comentários</h1>
-        {listComent.map((listComent) => (
-          <div>
-            <div>Nome: {listComent.nome}</div>
-            <div>Email: {listComent.email}</div>
-            <div>Comentários: {listComent.comentario}</div>
-            <hr />
+        {listComent.map((listComent, chave) => (
+          <div key={chave.id}>
+            <div className="divList">
+              <div className="content-list">
+                <strong>Nome: </strong>
+                {listComent.nome}
+              </div>
+              <div className="content-list">
+                <strong>Email: </strong> {listComent.email}
+              </div>
+              <div className="content-list">
+                <strong>Comentários: </strong> {listComent.comentario}
+              </div>
+            </div>
           </div>
         ))}
       </div>
