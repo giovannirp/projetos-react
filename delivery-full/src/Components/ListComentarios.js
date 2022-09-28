@@ -20,9 +20,9 @@ export default function ListComentarios() {
     <main>
       <div className="listComentarios">
         <h1>Lista de todos os comentários</h1>
-        {listComent.map((listComent, chave) => (
-          <div key={chave.id}>
-            <div className="divList">
+        {listComent.map((listComent, index) => (
+          <div key={index}>
+            <div className="divList" >
               <div className="content-list">
                 <strong>Nome: </strong>
                 {listComent.nome}

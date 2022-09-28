@@ -2,9 +2,11 @@ import React from "react";
 import { useEffect } from "react";
 import { useState } from "react";
 import ListComentarios from "../Components/ListComentarios";
+import { useFetch } from "../hooks/useFetch";
 import "./Comentarios.scss";
 
 export default function Comentarios() {
+
   const [comentarios, setComentarios] = useState([]);
 
   const [nome, setNome] = useState("");
@@ -25,8 +27,6 @@ export default function Comentarios() {
       comentario
     }
 
-    console.log(comentarios)
-
     const response = await fetch("http://localhost:3000/comentarios", {
       method: "POST",
       headers: {
@@ -35,12 +35,15 @@ export default function Comentarios() {
       body: JSON.stringify(comentarios)
     })
 
+    const addComents = await response.json();
+
+    setComentarios((prevComents) =>{ 
+      console.log(prevComents)
+      return [...prevComents, addComents];
+    });
+
     clearInputs();
-
-    return await response.json();
   };
-
-
 
   return (
     <main>
