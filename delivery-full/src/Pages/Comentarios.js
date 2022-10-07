@@ -1,13 +1,12 @@
-import React from "react";
-import { useEffect } from "react";
-import { useState } from "react";
+import React, {useState} from "react";
 import ListComentarios from "../Components/ListComentarios";
-import { useFetch } from "../hooks/useFetch";
 import "./Comentarios.scss";
 
 export default function Comentarios() {
 
   const [comentarios, setComentarios] = useState([]);
+  
+  const [values, setValues] = useState({});
 
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -17,6 +16,10 @@ export default function Comentarios() {
     setNome("");
     setEmail("");
     setComentario("");
+  }
+
+  const handleChangeName = (e) => {
+    setNome(e.target.value);
   }
 
   const handleSubmit = async (event) => {
@@ -55,8 +58,9 @@ export default function Comentarios() {
             <input
               type="text"
               value={nome}
-              onChange={(e) => setNome(e.target.value)}
+              onChange={handleChangeName}
               id="nome"
+              name="nome"
             />
           </div>
           <div className="form-control">
