@@ -1,12 +1,13 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import ListComentarios from "../Components/ListComentarios";
 import "./Comentarios.scss";
+//const url = "http://localhost:3000/comentarios";
+import "../funcs/variable";
+import { urlComentarios } from "../funcs/variable";
+
 
 export default function Comentarios() {
-
   const [comentarios, setComentarios] = useState([]);
-  
-  const [values, setValues] = useState({});
 
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -16,32 +17,32 @@ export default function Comentarios() {
     setNome("");
     setEmail("");
     setComentario("");
-  }
+  };
 
   const handleChangeName = (e) => {
     setNome(e.target.value);
-  }
+  };
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const comentarios = {
       nome,
       email,
-      comentario
-    }
+      comentario,
+    };
 
-    const response = await fetch("http://localhost:3000/comentarios", {
+    const response = await fetch(urlComentarios, {
       method: "POST",
       headers: {
-        "Content-type" : "application/json"
+        "Content-type": "application/json",
       },
-      body: JSON.stringify(comentarios)
-    })
+      body: JSON.stringify(comentarios),
+    });
 
     const addComents = await response.json();
 
-    setComentarios((prevComents) =>{ 
-      console.log(prevComents)
+    setComentarios((prevComents) => {
+      console.log(prevComents);
       return [...prevComents, addComents];
     });
 
@@ -74,10 +75,16 @@ export default function Comentarios() {
           </div>
           <div className="form-text-area">
             <label htmlFor="comentario">Comentário:</label>
-            <textarea value={comentario} id="comentario" onChange={(e) => setComentario(e.target.value)} cols="30" rows="10"></textarea>
+            <textarea
+              value={comentario}
+              id="comentario"
+              onChange={(e) => setComentario(e.target.value)}
+              cols="30"
+              rows="10"
+            ></textarea>
           </div>
           <div className="form-control-button">
-          <input type="submit" value="Enviar" />
+            <input type="submit" value="Enviar" />
           </div>
         </form>
         <hr />

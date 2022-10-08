@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { useFetch } from "../hooks/useFetch";
+import { urlContato } from "../funcs/variable";
 import "./Contato.scss";
 
-const url = "http://localhost:3000/contato";
+//const url = "http://localhost:3000/contato";
 
 export default function Contato() {
-  const { data: items, httpConfig } = useFetch(url);
+  const { data: items, httpConfig } = useFetch(urlContato);
   const [contato, setContato] = useState([]);
 
   const [nome, setNome] = useState("");
@@ -16,7 +17,7 @@ export default function Contato() {
     setNome("");
     setTelefone("");
     setMensagem("");
-  }
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -24,8 +25,8 @@ export default function Contato() {
     const contato = {
       nome,
       telefone,
-      mensagem
-    }
+      mensagem,
+    };
 
     // const res = await fetch(url, {
     //   method: "POST",
@@ -39,7 +40,7 @@ export default function Contato() {
     httpConfig(contato, "POST");
 
     clearInputs();
-  }
+  };
 
   return (
     <main>
