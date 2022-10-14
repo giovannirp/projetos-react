@@ -1,14 +1,18 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import "./ListComentarios.scss";
-const url = "http://localhost:3000/comentarios";
+import { useFetch } from "../hooks/useFetch";
+import { urlComentarios } from "../funcs/variable";
+
 
 export default function ListComentarios() {
   const [listComent, setListComent] = useState([]);
+  //const { data: listComent } = useFetch(url);
+
 
   useEffect(() => {
     async function fetchDatComentario() {
-      const res = await fetch(url);
+      const res = await fetch(urlComentarios);
 
       const data = await res.json();
       console.log(data);

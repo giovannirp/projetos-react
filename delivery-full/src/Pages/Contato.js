@@ -3,8 +3,6 @@ import { useFetch } from "../hooks/useFetch";
 import { urlContato } from "../funcs/variable";
 import "./Contato.scss";
 
-//const url = "http://localhost:3000/contato";
-
 export default function Contato() {
   const { data: items, httpConfig } = useFetch(urlContato);
   const [contato, setContato] = useState([]);

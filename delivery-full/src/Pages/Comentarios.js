@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import ListComentarios from "../Components/ListComentarios";
 import "./Comentarios.scss";
+import { useFetch } from "../hooks/useFetch";
+
 //const url = "http://localhost:3000/comentarios";
 import "../funcs/variable";
 import { urlComentarios } from "../funcs/variable";
@@ -8,6 +10,8 @@ import { urlComentarios } from "../funcs/variable";
 
 export default function Comentarios() {
   const [comentarios, setComentarios] = useState([]);
+  const { data: items, httpConfig } = useFetch(urlComentarios);
+
 
   const [nome, setNome] = useState("");
   const [email, setEmail] = useState("");
@@ -31,20 +35,17 @@ export default function Comentarios() {
       comentario,
     };
 
-    const response = await fetch(urlComentarios, {
-      method: "POST",
-      headers: {
-        "Content-type": "application/json",
-      },
-      body: JSON.stringify(comentarios),
-    });
+    // const response = await fetch(urlComentarios, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-type": "application/json",
+    //   },
+    //   body: JSON.stringify(comentarios),
+    // });
 
-    const addComents = await response.json();
-
-    setComentarios((prevComents) => {
-      console.log(prevComents);
-      return [...prevComents, addComents];
-    });
+    // const addComents = await response.json();
+    // setComentarios((prevComents) => [...prevComents, addComents]);
+    httpConfig(comentarios, "POST");
 
     clearInputs();
   };
