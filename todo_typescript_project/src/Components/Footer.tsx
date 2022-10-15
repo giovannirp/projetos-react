@@ -1,11 +1,13 @@
 import React from "react";
 
+import styles from "./Footer.module.css";
+
 type Props = {};
 
 const Footer = () => {
   return (
-    <footer>
-      <p>React+ ts Todo</p>
+    <footer className={styles.footer}>
+      <p>React+ ts Todo -  parei aqui330 estilos inicias</p>
     </footer>
   );
 };
