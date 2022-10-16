@@ -5,6 +5,7 @@ import styles from "./App.module.css";
 import TaskForm from "./Components/TaskForm";
 import TaskList from "./Components/TaskList";
 import { ITask } from "./interfaces/Task";
+import Modal from "./Components/Modal";
 
 function App() {
   const [taskList, setTaskList] = useState<ITask[]>([]);
@@ -14,11 +15,19 @@ function App() {
       taskList.filter((task) => {
         return task.id !== id;
       })
-    )
-  }
+    );
+  };
 
   return (
     <div>
+      <Modal
+        children={
+          <TaskForm
+            btnText="Criar Tarefa"
+            taskList={taskList}
+          />
+        }
+      />
       <Header />
       <main className={styles.main}>
         <div>
