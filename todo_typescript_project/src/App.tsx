@@ -33,8 +33,8 @@ function App() {
     setTaskToUpdate(task);
   };
 
-  const updateTask = (id: number, title: string, difficulty: number) => {
-    const updatedTask: ITask = {id, title, difficulty}
+  const updateTask = (id: number, title: string, email: string, difficulty: number) => {
+    const updatedTask: ITask = {id, title, email, difficulty}
 
     const updatedItems = taskList.map((task) => {
       return task.id === updatedTask.id ?updatedTask : task
@@ -51,7 +51,7 @@ function App() {
       <Modal
         children={
           <TaskForm
-            btnText="Criar Tarefa"
+            btnText="Criar Tarefa gigi"
             taskList={taskList}
             task={taskToUpdate}
             handleUpdate={updateTask}
